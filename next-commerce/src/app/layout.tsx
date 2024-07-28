@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="es">
+    <html lang="en">
       <body className={inter.className}>
         <Navbar/>
         <main className="bg-slate-700 h-screen p-16">
