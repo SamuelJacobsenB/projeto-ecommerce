@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -6,6 +7,14 @@ const Navbar = () => {
     <Link href={'/'} className="uppercase font-bold text-md h-12 flex items-center">
       Next Store
     </Link>
+    <div className="flex items-center gap-8">
+      <SignedIn>
+        Usuário logado
+      </SignedIn>
+      <SignedOut>
+        Fazer login
+      </SignedOut>
+    </div>
   </nav>
   )
 }

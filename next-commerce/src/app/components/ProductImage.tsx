@@ -18,7 +18,7 @@ const ProductImage = ({ product, fill }: ProductImageProps) => {
             src={product.image} 
             fill
             alt={product.title} 
-            className={`object-cover 
+            className={`object-cover rounded-sm 
                 ${
                     loading ? 'scale-110 blur-3xl grayscale' : 'scale-100 blur-0 grayscale-0'}`
                 }
