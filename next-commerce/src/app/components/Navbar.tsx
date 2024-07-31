@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SignedIn, SignedOut } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -9,10 +9,14 @@ const Navbar = () => {
     </Link>
     <div className="flex items-center gap-8">
       <SignedIn>
-        Usuário logado
+        <UserButton/>
       </SignedIn>
       <SignedOut>
-        Fazer login
+        <SignInButton mode="modal">
+          <button className="uppercase rounded-md border-gray-400 px-3 py2">
+            Fazer login
+          </button>
+        </SignInButton>
       </SignedOut>
     </div>
   </nav>
